@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:project_structure/model/data_akun.dart';
 
 class InfoAccountBalance extends StatefulWidget {
 
   final String balanceTitle = "Your Balance";
-  final String balanceTotal = "\$8000";
 
   @override
   _InfoAccountBalanceState createState() => _InfoAccountBalanceState();
@@ -23,7 +23,7 @@ class _InfoAccountBalanceState extends State<InfoAccountBalance> {
         title: Text(widget.balanceTitle,
           style: TextStyle(color: Colors.white),
         ),
-        subtitle: Text(widget.balanceTotal,
+        subtitle: Text("\$ $duitBalance",
           style: TextStyle(color: Colors.white),
         ),
         trailing: IconButton(

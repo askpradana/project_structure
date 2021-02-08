@@ -1,0 +1,1 @@
+int duitBalance = 10000;
