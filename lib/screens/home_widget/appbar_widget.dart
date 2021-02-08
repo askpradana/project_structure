@@ -19,8 +19,6 @@ class AppBarIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: padding,
-      decoration:
-          BoxDecoration(border: Border.all(width: 1, color: Colors.black)),
       margin: margin,
       child: IconButton(
         icon: icon,
