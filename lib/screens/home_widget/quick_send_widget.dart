@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class QuickReSend extends StatelessWidget {
   final List _avatar = [
@@ -49,7 +50,7 @@ class QuickReSend extends StatelessWidget {
       height: 70,
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: NetworkImage(_avatar[index]), fit: BoxFit.cover),
+              image: CachedNetworkImageProvider(_avatar[index]), fit: BoxFit.cover),
           borderRadius: BorderRadius.all(Radius.circular(8))),
     );
   }

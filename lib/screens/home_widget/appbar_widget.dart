@@ -31,17 +31,25 @@ class AppBarIcon extends StatelessWidget {
 
 class AppBarDefault extends StatelessWidget {
 
-  final String title = "Home";
+  AppBarDefault({
+    this.leftIcon,
+    this.onPressedLeft,
+  });
+
+  final IconData leftIcon;
+  final Function onPressedLeft;
+
+  final String title = "Nama Aplikasi";
   
   @override
   Widget build(BuildContext context) {
     return AppBar(
       leading: AppBarIcon(
-        icon: Icon(Icons.pie_chart),
+        icon: Icon(leftIcon),
         color: Colors.black,
         margin: EdgeInsets.all(4),
         padding: EdgeInsets.all(4),
-        onPressed: () {},
+        onPressed: onPressedLeft,
       ),
       actions: [
         AppBarIcon(

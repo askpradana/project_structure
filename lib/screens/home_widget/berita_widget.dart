@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class Berita extends StatelessWidget {
 
@@ -40,7 +41,7 @@ class Berita extends StatelessWidget {
                   width: 200,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage(_gambarHeadline[index]),
+                      image: CachedNetworkImageProvider(_gambarHeadline[index]),
                       fit: BoxFit.cover
                     ),
                   ),
